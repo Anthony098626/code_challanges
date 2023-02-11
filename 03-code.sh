@@ -6,6 +6,7 @@
 # Purpose: This script prints in login history of users on the computer     
 
 # Basic function
+# source (https://linuxhint.com/check-user-login-history-linux/)
 # Main
 
 login_history(){
