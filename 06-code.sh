@@ -5,7 +5,7 @@
 # Date of latest revision: 02/13/2023     
 # Purpose: This scrip detects is a file or directory exsist and if not creadit it.
 
-#source chatgbt.com
+# source chatgbt.com
 
 # Main 
 
