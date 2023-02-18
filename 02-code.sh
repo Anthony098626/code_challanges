@@ -5,7 +5,7 @@
 # Author Name:                  Anthony Wall
 # Date of latest revision:      02/07/2023
 # Purpose: creat a script that prints a string to the consol.                      
-"this is a string"
+
 # Main
 
 echo "this is a string"
