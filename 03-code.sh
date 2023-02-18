@@ -10,7 +10,9 @@
 # Main
 
 login_history(){
-    last
+   potato="anthony"
+   echo "good day, "$potato
+   last
 }
 
 login_history
