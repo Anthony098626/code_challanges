@@ -9,13 +9,12 @@
 
 # Main 
 
-    mkdir blue1 green2 yellow3 orange4
-    directories=("blue1"'green2""yellow3""orange4")
+mkdir blue1 green2 yellow3 orange4
+ directories=("blue1"'green2""yellow3""orange4")
 
-    for dir in "${directories}
-    do 
-    touch "${dir}/file.txt"
-
+for dir in "${directories}
+do 
+touch "${dir}/file.txt"
 
 
 # End  
