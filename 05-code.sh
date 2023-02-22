@@ -8,14 +8,15 @@
 # source https://chat.openai.com/chat 
 
 # Main 
-import os
 
-print("List of running processes:")
-processes = os.popen("ps -e").read()
-print(processes)
+while true
+do
+    ps -aux
+    echo "Run as Admin for full functionality"
+    echo "Enter PID of Process you would like to kill:"
+    read kill_PID
 
-pid = int(input("Enter PID of the process to be killed: "))
+    kill $kill_PID
+done
 
-os.system(f"kill {pid}")
-print(f"Process with PID {pid} has been killed.")
 # End 
