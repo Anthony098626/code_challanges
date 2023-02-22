@@ -9,12 +9,18 @@
 
 # Main 
 
-mkdir blue1 green2 yellow3 orange4
- directories=("blue1"'green2""yellow3""orange4")
+dir_create() {
+    mkdir blue green yellow orange
+    dir_array=("./blue/" "./green/" "./yellow/" "./orange/")   
+}
 
-for dir in "${directories}
-do 
-touch "${dir}/file.txt"
+file_create() {
+    touch "${dir_array[0]}file0.txt"
+    touch "${dir_array[1]}file1.txt"
+    touch "${dir_array[2]}file2.txt"
+    touch "${dir_array[3]}file3.txt"
+}
+   
+dir_create
 
-
-# End  
+file_create
