@@ -6,7 +6,6 @@
 
 # Main 
 
-
 Get-NetIPAddress -AddressFamily IPv4 | Select-Object -ExpandProperty IPAddress
 
 $ipconfig = ipconfig /all
@@ -15,4 +14,4 @@ Write-Host "IPv4 address: $ipv4"
 
 #End 
 
-Sourced from chatgbt.com 
+Sourced from chatgbt.com  
