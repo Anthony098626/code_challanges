@@ -7,8 +7,6 @@
 
 # source chatgbt.com
 
-# Main 
-
 import os
 
 path = "C:\Users\Public\Logi\registry.json"
@@ -19,4 +17,7 @@ if not os.path.exists(path):
 else:
     print(path, "already exists")
 
-#End
+for Wall in range(1, 100):
+    print(wall) 
+
+
