@@ -1,4 +1,4 @@
-HI I am Anthony and this is my git repo I hae created wile attending code fellows.  This is my trainging ground as I transition into my new carrer in cyber security.  I am currently studying for the ITF+ comptia certificantion while learing new skills and tools that consist of. 
+HI I am Anthony and this is my git repo I have created wile attending code fellows.  This is my trainging ground as I transition into my new carrer in cyber security.  I am currently studying for the ITF+ comptia certificantion while learing new skills and tools that consist of. 
        
         - Git                            - Powershell
         
