@@ -37,4 +37,4 @@ do
   fi
 done
 
-# source / chatgbt.comg
+# source / chatgbt.com
