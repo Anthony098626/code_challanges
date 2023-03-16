@@ -36,3 +36,5 @@ do
     sleep 0.5s
   fi
 done
+
+# source / chatgbt.comg
