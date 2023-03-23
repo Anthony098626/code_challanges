@@ -19,5 +19,4 @@ print("Sixth through tenth elements of the list:", my_list[5:10])
 my_list[6] = "onion"
 print("List after changing the value of the seventh element:", my_list)
 
-source
-* chatgbt.com
+#source: chatgbt.com
