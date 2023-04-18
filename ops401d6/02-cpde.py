@@ -34,3 +34,4 @@ while True:
     print("{} - {} - {}".format(current_time, ip_address, status))
     # Wait for 2 seconds before pinging again
     time.sleep(2)
+    # source openai.com
