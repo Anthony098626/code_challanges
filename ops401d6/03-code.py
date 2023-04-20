@@ -35,14 +35,16 @@ while True:
     # Wait for 2 seconds before pinging again
     time.sleep(2)
 # Ask the user for an email address and password to use for sending notifications.
-email = input("anthony098626@gmail.com")
-password = input("4NuUn!MGk]xjD3c9aEHK")
+email = input("Enter your email address: ")
+password = input("Enter your email password: ")
 # Send an email to the administrator if a host status changes (from “up” to “down” or “down” to “up”).
 import smtplib
+import getpass
 
 def send_email_notification(message):
     sender_email = "anthony098626.lab@gmail.com"
-    sender_password = "4NuUn!MGk]xjD3cpaEHK"
+    sender_password = getpass.getpass(prompt='Enter sender email password: ')
+
     recipient_email = "anthony098626@gmail.com"
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
@@ -61,35 +63,39 @@ host_status_changed = True # set to True if host_status has changed, else False
 if host_status_changed:
     message = f"Host status changed to {host_status}!"
     send_email_notification(message)
-
 # Clearly indicate in the message which host status changed, the status before and after, and a timestamp of the event.
 import smtplib
+import getpass
 from datetime import datetime
 
 def send_email_notification(message):
-    sender_email = "anthony098626@gmail.com" # fixed typo
-    sender_password = "4NuUn!MGk]xjD3c9aEHK"
+    sender_email = "anthony098626.lab@gmail.com"
+    sender_password = getpass.getpass(prompt='Enter sender email password: ')
+
     recipient_email = "anthony098626@gmail.com"
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        try:
-            smtp.login(sender_email, sender_password)
-        except smtplib.SMTPAuthenticationError:
-            print("Could not login to email server")
+        smtp.login(sender_email, sender_password)
 
         subject = "Host status changed!"
         body = message
 
-        email_message = f"Subject: {subject}\n{body}\n" # ended with single newline
+        email_message = f"Subject: {subject}\n{body}"
         smtp.sendmail(sender_email, recipient_email, email_message.encode('utf-8'))
 
-previous_host_status = "up"
-current_host_status = "down"
-timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+host_status = "up" # assume host is up initially
+host_status_changed = False # set to True if host_status has changed, else False
 
-if previous_host_status != current_host_status:
-    message = f"Host status has changed from {previous_host_status} to {current_host_status} at {timestamp}."
-    
+# simulate a change in the host status
+current_time = datetime.now()
+if current_time.second % 2 == 0:
+    host_status = "down" # host is down
+    host_status_changed = True
+
+# this would check if the host status had changed at any point
+if host_status_changed:
+    previous_status = "up" if host_status == "down" else "down"
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    message = f"The host status changed from {previous_status} to {host_status} at {timestamp}."
     send_email_notification(message)
-
 # source: openai.com
